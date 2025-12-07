@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Hasik</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- PASSWORD PROTECTION -->
+<script>
+  const password = prompt("Enter the password to open this site:");
+  if(password !== "hasik123"){ 
+    document.body.innerHTML = "<h1 style='text-align:center;margin-top:50px;'>Access Denied 🚫</h1>";
+    throw new Error("Access denied");
+  }
+</script>
+
+<!-- BACKGROUND MUSIC -->
+<audio id="bgMusic" src="music.mp3" loop autoplay></audio>
+
+<!-- BUBBLE CONTAINER -->
+<div id="bubble-container"></div>
+
+<!-- HOME SECTION -->
+<section class="home">
+  <h1 id="typingText"></h1>
+  <p class="sub">Scroll down to see everything 🙂</p>
+</section>
+
+<!-- IMAGE SLIDER -->
+<section class="gallery">
+  <h2>Gallery 📸</h2>
+  <div class="slider">
+    <div class="slides" id="slides">
+      <img src="photos/hasik1.jpeg">
+      <img src="photos/hasik2.jpeg">
+      <img src="photos/hasik3.jpeg">
+    </div>
+  </div>
+</section>
+
+<!-- CHAT MESSAGES -->
+<section class="messages">
+  <h2>Messages 💬</h2>
+  <div class="chat-box" id="chatBox"></div>
+  <button onclick="nextChat()">Next ➡️</button>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
